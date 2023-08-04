@@ -82,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="res\pong_ball.png" />
+    <Content Include="res\pong table.png" />
     <Content Include="res\pong_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
