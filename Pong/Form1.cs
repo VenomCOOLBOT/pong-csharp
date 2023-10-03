@@ -30,7 +30,8 @@ namespace Pong
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
-            StartGameThread();
+            
+                
         }
 
         void GameLoop()
@@ -124,6 +125,7 @@ namespace Pong
         {
             gameThread = new Thread(GameLoop);
             gameThread.Start();
+            this.Focus();
         }
 
         protected override void OnKeyDown(KeyEventArgs e)
@@ -156,6 +158,7 @@ namespace Pong
 
         private void score1_Click(object sender, EventArgs e)
         {
+           
         }
 
         private void score2_Click(object sender, EventArgs e)
@@ -176,6 +179,36 @@ namespace Pong
 
         private void player2_Click(object sender, EventArgs e)
         {
+        }
+
+        private void play_button_Click(object sender, EventArgs e)
+        {
+         
+            menu_pic.Hide();
+            play_button.Hide();
+            author_label.Hide();
+            menu_title.Hide();
+            StartGameThread();
+        }
+
+        private void author_label_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void start_menu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pong_title_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
