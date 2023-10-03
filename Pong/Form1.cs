@@ -94,12 +94,14 @@ namespace Pong
                 ballPositionX = 480;
                 ballPositionY = 380;
                 playerTwoScore++;
+                CheckForWinAndOpenWebsite();
             }
             else if (ballPositionX > 945)
             {
                 ballPositionX = 480;
                 ballPositionY = 380;
                 playerOneScore++;
+                CheckForWinAndOpenWebsite();
             }
 
             UpdatePaddlePositions();
@@ -142,6 +144,22 @@ namespace Pong
                 isPlayer2MovingDown = true;
         }
 
+        private void CheckForWinAndOpenWebsite()
+        {
+            if (playerOneScore == 15)
+            {
+                MessageBox.Show("Player 1 wins!");
+                Application.Exit();
+                gameThread.Abort();
+            }
+            else if (playerTwoScore == 15)
+            {
+                MessageBox.Show("Player 2 wins!");
+                Application.Exit();
+                gameThread.Abort();
+            }
+        }
+
         protected override void OnKeyUp(KeyEventArgs e)
         {
             base.OnKeyUp(e);
@@ -158,7 +176,6 @@ namespace Pong
 
         private void score1_Click(object sender, EventArgs e)
         {
-           
         }
 
         private void score2_Click(object sender, EventArgs e)
@@ -188,6 +205,7 @@ namespace Pong
             play_button.Hide();
             author_label.Hide();
             menu_title.Hide();
+            first_to.Hide();
             StartGameThread();
         }
 
@@ -207,6 +225,16 @@ namespace Pong
         }
 
         private void pong_title_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
         {
 
         }

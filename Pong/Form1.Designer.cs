@@ -39,6 +39,7 @@
             this.menu_pic = new System.Windows.Forms.PictureBox();
             this.author_label = new System.Windows.Forms.Label();
             this.menu_title = new System.Windows.Forms.Label();
+            this.first_to = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player1)).BeginInit();
@@ -160,12 +161,25 @@
             this.menu_title.Text = "PONG";
             this.menu_title.Click += new System.EventHandler(this.pong_title_Click);
             // 
+            // first_to
+            // 
+            this.first_to.AutoSize = true;
+            this.first_to.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.first_to.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.first_to.Location = new System.Drawing.Point(451, 425);
+            this.first_to.Name = "first_to";
+            this.first_to.Size = new System.Drawing.Size(111, 18);
+            this.first_to.TabIndex = 11;
+            this.first_to.Text = "First to 15 wins!";
+            this.first_to.Click += new System.EventHandler(this.label1_Click_1);
+            // 
             // Pong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(984, 761);
+            this.Controls.Add(this.first_to);
             this.Controls.Add(this.menu_title);
             this.Controls.Add(this.author_label);
             this.Controls.Add(this.play_button);
@@ -205,6 +219,7 @@
         private System.Windows.Forms.PictureBox menu_pic;
         private System.Windows.Forms.Label author_label;
         private System.Windows.Forms.Label menu_title;
+        private System.Windows.Forms.Label first_to;
     }
 }
 
